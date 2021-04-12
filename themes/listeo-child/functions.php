@@ -60,7 +60,7 @@ jQuery(window).load(function() {
 add_shortcode( 'listing-category', 'listing_category_slider' );
 if (!is_admin()) {
     add_filter( 'script_loader_tag', function ( $tag, $handle ) {    
-        if ( strpos( $tag, "jquery-migrate.min.js" ) || strpos( $tag, "jquery.js") ) {
+        if ( strpos( $tag, "jquery-migrate.min.js" ) || strpos( $tag, "jquery.min.js") ) {
             return $tag;
         }
         return str_replace( ' src', ' defer src', $tag );
